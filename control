@@ -1,0 +1,12 @@
+Package: love.litten.eneko
+Name: Eneko 🎬
+Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.14), firmware (>= 13.0), com.mrgcgamer.libgcuniversal
+Version: 1.1.1
+Architecture: iphoneos-arm
+Description: Set a video as your wallpaper
+Maintainer: Litten
+Author: Litten
+Section: Tweaks
+Depiction: https://repo.litten.love/depictions/ene/index.html
+SileoDepiction: https://repo.litten.love/depictions/ene/ene.json
+Icon: https://repo.litten.love/depictions/ene/assets/icon.png
