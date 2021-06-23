@@ -9,9 +9,7 @@
     self.appearanceSettings = [ENEAppearanceSettings new];
     self.hb_appearanceSettings = [self appearanceSettings];
 
-
     self.preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.enekopreferences"];
-
 
     self.enableSwitch = [UISwitch new];
     [[self enableSwitch] setOnTintColor:[UIColor colorWithRed:0.78 green:0.76 blue:0.98 alpha:1.00]];
@@ -39,7 +37,6 @@
         [self.titleLabel.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor],
     ]];
 
-
     self.iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     [[self iconView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self iconView] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/EnekoPrefs.bundle/icon.png"]];
@@ -53,7 +50,6 @@
         [self.iconView.trailingAnchor constraintEqualToAnchor:self.navigationItem.titleView.trailingAnchor],
         [self.iconView.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor],
     ]];
-
 
     self.blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
     self.blurView = [[UIVisualEffectView alloc] initWithEffect:[self blur]];
@@ -132,9 +128,9 @@
 
 - (NSArray *)specifiers {
 
-	if (_specifiers == nil) _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
+    if (_specifiers == nil) _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
 
-	return _specifiers;
+    return _specifiers;
     
 }
 
@@ -186,17 +182,17 @@
 - (void)resetPrompt {
 
     UIAlertController* resetAlert = [UIAlertController alertControllerWithTitle:@"Eneko" message:@"Do you really want to reset your preferences?" preferredStyle:UIAlertControllerStyleActionSheet];
-	
+    
     UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:@"Yaw" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
         [self resetPreferences];
-	}];
+    }];
 
-	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Naw" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Naw" style:UIAlertActionStyleCancel handler:nil];
 
-	[resetAlert addAction:confirmAction];
-	[resetAlert addAction:cancelAction];
+    [resetAlert addAction:confirmAction];
+    [resetAlert addAction:cancelAction];
 
-	[self presentViewController:resetAlert animated:YES completion:nil];
+    [self presentViewController:resetAlert animated:YES completion:nil];
 
 }
 
