@@ -9,7 +9,7 @@
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-                <string>Lockscreen Camera Hook</string>
+                <string>Lock Screen Camera Hook</string>
         </dict>
         <dict>
             <key>cell</key>
