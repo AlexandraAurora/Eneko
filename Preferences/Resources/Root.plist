@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>CallaSingleContactCell</string>
+			<key>DisplayName</key>
+			<string>Alexandra</string>
+			<key>Username</key>
+			<string>Traurige</string>
+			<key>Url</key>
+			<string>https://github.com/Traurige</string>
+			<key>height</key>
+			<real>58</real>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>Enabled</string>
+			<key>label</key>
+			<string>Enable Eneko</string>
+            <key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Lock Screen</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>EnableLockScreenWallpaper</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>GcImagePickerCell</string>
+			<key>label</key>
+			<string>Wallpaper</string>
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>LockScreenWallpaper</string>
+			<key>usesPhotos</key>
+			<false />
+			<key>usesVideos</key>
+			<true />
+			<key>videoQuality</key>
+			<integer>0</integer>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Volume</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>0</real>
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>LockScreenVolume</string>
+			<key>min</key>
+			<real>0</real>
+			<key>max</key>
+			<real>1.0</real>
+			<key>showValue</key>
+			<true />
+			<key>isSegmented</key>
+			<false />
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Home Screen</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>EnableHomeScreenWallpaper</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>GcImagePickerCell</string>
+			<key>label</key>
+			<string>Wallpaper</string>
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>HomeScreenWallpaper</string>
+			<key>usesPhotos</key>
+			<false />
+			<key>usesVideos</key>
+			<true />
+			<key>videoQuality</key>
+			<integer>0</integer>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Volume</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>0</real>
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>HomeScreenVolume</string>
+			<key>min</key>
+			<real>0</real>
+			<key>max</key>
+			<real>1.0</real>
+			<key>showValue</key>
+			<true />
+			<key>isSegmented</key>
+			<false />
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Behavior</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>MuteWhenMusicPlays</string>
+			<key>label</key>
+			<string>Mute when Music Plays</string>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>DisableInLowPowerMode</string>
+			<key>label</key>
+			<string>Disable in Low Power Mode</string>
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Tools</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Respring</string>
+			<key>action</key>
+			<string>respring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Reset Preferences</string>
+			<key>action</key>
+			<string>resetPrompt</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Thanks to you and everyone who has helped in any way.</string>
+			<key>isStaticText</key>
+			<true />
+		</dict>
+		<dict>
+ 			<key>cell</key>
+ 			<string>PSLinkCell</string>
+ 			<key>label</key>
+ 			<string>Credits</string>
+ 			<key>detail</key>
+ 			<string>EnekoCreditsListController</string>
+ 		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Eneko by Traurige</string>
+			<key>isStaticText</key>
+			<true />
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>CallaLinkCell</string>
+			<key>label</key>
+			<string>Source Code</string>
+			<key>subtitle</key>
+			<string>It's on GitHub</string>
+			<key>url</key>
+			<string>https://github.com/Traurige/Eneko</string>
+			<key>height</key>
+			<real>52</real>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>CallaLinkCell</string>
+			<key>label</key>
+			<string>Bug/Feature</string>
+			<key>subtitle</key>
+			<string>Submit an issue</string>
+			<key>url</key>
+			<string>https://github.com/Traurige/Eneko/issues/new/choose</string>
+			<key>height</key>
+			<real>52</real>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>CallaLinkCell</string>
+			<key>label</key>
+			<string>Donate</string>
+			<key>subtitle</key>
+			<string>I got a Ko-fi</string>
+			<key>url</key>
+			<string>https://ko-fi.com/traurige</string>
+			<key>height</key>
+			<real>52</real>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Eneko</string>
+</dict>
+</plist>

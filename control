@@ -1,0 +1,10 @@
+Package: dev.traurige.eneko
+Name: Eneko
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader, com.mrgcgamer.libgcuniversal
+Conflicts: love.litten.eneko
+Version: 1.2
+Architecture: iphoneos-arm
+Description: Video wallpapers for iOS
+Maintainer: Traurige
+Author: Traurige
+Section: Tweaks
