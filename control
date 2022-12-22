@@ -5,6 +5,6 @@ Conflicts: love.litten.eneko
 Version: 1.2
 Architecture: iphoneos-arm
 Description: Video wallpapers for iOS
-Maintainer: Traurige
-Author: Traurige
+Maintainer: Traurige <hello@traurige.dev>
+Author: Traurige <hello@traurige.dev>
 Section: Tweaks
