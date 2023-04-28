@@ -70,7 +70,13 @@
 		[userDefaults removeObjectForKey:key];
 	}
 
-	[[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier] error:nil];
+	NSArray* paths = @[
+		[NSString stringWithFormat:@"/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier],
+		[NSString stringWithFormat:@"/var/jb/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier]
+	];
+	for (NSString* path in paths) {
+		[[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+	}
 
 	[self reloadSpecifiers];
 	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)kNotificationKeyPreferencesReload, nil, nil, YES);
