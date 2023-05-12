@@ -4,7 +4,7 @@ Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader, com.mrgcgamer.li
 Conflicts: love.litten.eneko
 Version: 1.3
 Architecture: iphoneos-arm
-Description: Video wallpapers for iOS
+Description: Live wallpapers for iOS
 Maintainer: Traurige <hello@traurige.dev>
 Author: Traurige <hello@traurige.dev>
 Section: Tweaks

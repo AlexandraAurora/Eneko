@@ -1,5 +1,5 @@
 # Eneko
-Video wallpapers for iOS
+Live wallpapers for iOS
 
 ## Preview
 <img src="Preview.png" alt="Preview" />
