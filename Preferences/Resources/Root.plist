@@ -207,6 +207,23 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Once your wallpaper has downloaded tap on "More..." and then "Save Video". Simply select it as Lock/Home screen wallpaper above afterwards.</string>
+			<key>isStaticText</key>
+			<true />
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Browse Catalogue</string>
+			<key>action</key>
+			<string>cataloguePrompt</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Tools</string>
 		</dict>

@@ -18,11 +18,42 @@
 		[[specifier propertyForKey:@"key"] isEqualToString:kPreferenceKeyEnableHomeScreenWallpaper] ||
 		[[specifier propertyForKey:@"key"] isEqualToString:kPreferenceKeyHomeScreenVolume]
 	) {
-		[self promptToRespring];
+		[self respringPrompt];
     }
 }
 
-- (void)promptToRespring {
+- (void)cataloguePrompt {
+	UIAlertController* catalogueAlert = [UIAlertController alertControllerWithTitle:@"Choose Catalogue" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
+    UIAlertAction* myLiveWallpapersAction = [UIAlertAction actionWithTitle:@"MyLiveWallpapers" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [self openCatalogueWithUrl:[NSURL URLWithString:@"https://mylivewallpapers.com"]];
+    }];
+
+    UIAlertAction* liveWallpapers4FreeAction = [UIAlertAction actionWithTitle:@"LiveWallpapers4Free" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [self openCatalogueWithUrl:[NSURL URLWithString:@"https://livewallpapers4free.com"]];
+    }];
+
+    UIAlertAction* liveWallPAction = [UIAlertAction actionWithTitle:@"LiveWallP" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [self openCatalogueWithUrl:[NSURL URLWithString:@"https://livewallp.com"]];
+    }];
+
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+
+    [catalogueAlert addAction:myLiveWallpapersAction];
+    [catalogueAlert addAction:liveWallpapers4FreeAction];
+    [catalogueAlert addAction:liveWallPAction];
+    [catalogueAlert addAction:cancelAction];
+
+    [self presentViewController:catalogueAlert animated:YES completion:nil];
+}
+
+- (void)openCatalogueWithUrl:(NSURL *)url {
+    SFSafariViewController* safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+    [safariViewController setDelegate:self];
+    [self presentViewController:safariViewController animated:YES completion:nil];
+}
+
+- (void)respringPrompt {
     UIAlertController* resetAlert = [UIAlertController alertControllerWithTitle:@"Eneko" message:@"This option requires a respring to apply. Do you want to respring now?" preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction* yesAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
