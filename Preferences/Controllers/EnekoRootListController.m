@@ -69,15 +69,10 @@
 }
 
 - (void)respring {
-	NSArray* launchPaths = @[@"/usr/bin/killall", @"/var/jb/usr/bin/killall"];
-	for (NSString* launchPath in launchPaths) {
-		if ([[NSFileManager defaultManager] fileExistsAtPath:launchPath]) {
-			NSTask* task = [[NSTask alloc] init];
-			[task setLaunchPath:launchPath];
-			[task setArguments:@[@"backboardd"]];
-			[task launch];
-		}
-	}
+	NSTask* task = [[NSTask alloc] init];
+	[task setLaunchPath:ROOT_PATH_NS(@"/usr/bin/killall")];
+	[task setArguments:@[@"backboardd"]];
+	[task launch];
 }
 
 - (void)resetPrompt {
@@ -101,13 +96,8 @@
 		[userDefaults removeObjectForKey:key];
 	}
 
-	NSArray* paths = @[
-		[NSString stringWithFormat:@"/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier],
-		[NSString stringWithFormat:@"/var/jb/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier]
-	];
-	for (NSString* path in paths) {
-		[[NSFileManager defaultManager] removeItemAtPath:path error:nil];
-	}
+	NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/%@/", kPreferencesIdentifier];
+	[[NSFileManager defaultManager] removeItemAtPath:ROOT_PATH_NS_VAR(path) error:nil];
 
 	[self reloadSpecifiers];
 	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)kNotificationKeyPreferencesReload, nil, nil, YES);

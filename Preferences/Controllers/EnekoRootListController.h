@@ -4,6 +4,7 @@
 #import <SafariServices/SafariServices.h>
 #import "../PreferenceKeys.h"
 #import "../NotificationKeys.h"
+#import <rootless.h>
 
 @interface EnekoRootListController : PSListController <SFSafariViewControllerDelegate>
 @end
