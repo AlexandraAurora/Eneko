@@ -107,6 +107,10 @@
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Home Screen</string>
+			<key>footerText</key>
+			<string>Disabling the wallpaper zoom will expose your original wallpaper in the app switcher.</string>
+			<key>isStaticText</key>
+			<true />
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -165,6 +169,20 @@
 			<true />
 			<key>isSegmented</key>
 			<false />
+			<key>PostNotification</key>
+			<string>dev.traurige.eneko.preferences.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true />
+			<key>defaults</key>
+			<string>dev.traurige.eneko.preferences</string>
+			<key>key</key>
+			<string>ZoomWallpaper</string>
+			<key>label</key>
+			<string>Zoom Wallpaper</string>
 			<key>PostNotification</key>
 			<string>dev.traurige.eneko.preferences.reload</string>
 		</dict>

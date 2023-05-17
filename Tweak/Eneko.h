@@ -34,6 +34,7 @@ BOOL pfEnableLockScreenWallpaper;
 CGFloat pfLockScreenVolume;
 BOOL pfEnableHomeScreenWallpaper;
 CGFloat pfHomeScreenVolume;
+BOOL pfZoomWallpaper;
 BOOL pfMuteWhenMusicPlays;
 BOOL pfDisableInLowPowerMode;
 

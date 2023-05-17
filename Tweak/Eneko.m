@@ -74,7 +74,11 @@ static void override_SBIconController_viewDidLoad(SBIconController* self, SEL _c
     homeScreenPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:homeScreenPlayer];
     [homeScreenPlayerLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     [homeScreenPlayerLayer setFrame:[[[self view] layer] bounds]];
-    [homeScreenPlayerLayer setTransform:CATransform3DMakeScale(1.15, 1.15, 2)];
+
+    if (pfZoomWallpaper) {
+        [homeScreenPlayerLayer setTransform:CATransform3DMakeScale(1.15, 1.15, 2)];
+    }
+
     [[[self view] layer] insertSublayer:homeScreenPlayerLayer atIndex:0];
 
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
@@ -468,8 +472,9 @@ static void load_preferences() {
         kPreferenceKeyLockScreenVolume: @(kPreferenceKeyLockScreenVolumeDefaultValue),
         kPreferenceKeyEnableHomeScreenWallpaper: @(kPreferenceKeyEnableHomeScreenWallpaperDefaultValue),
         kPreferenceKeyHomeScreenVolume: @(kPreferenceKeyHomeScreenVolumeDefaultValue),
+        kPreferenceKeyZoomWallpaper: @(kPreferenceKeyZoomWallpaperDefaultValue),
         kPreferenceKeyMuteWhenMusicPlays: @(kPreferenceKeyMuteWhenMusicPlaysDefaultValue),
-        kPreferenceKeyDisableInLowPowerMode: @(kPreferenceKeyDisableInLowPowerModeDefaultValue),
+        kPreferenceKeyDisableInLowPowerMode: @(kPreferenceKeyDisableInLowPowerModeDefaultValue)
     }];
 
     pfEnabled = [[preferences objectForKey:kPreferenceKeyEnabled] boolValue];
@@ -477,6 +482,7 @@ static void load_preferences() {
     pfLockScreenVolume = [[preferences objectForKey:kPreferenceKeyLockScreenVolume] floatValue];
     pfEnableHomeScreenWallpaper = [[preferences objectForKey:kPreferenceKeyEnableHomeScreenWallpaper] boolValue];
     pfHomeScreenVolume = [[preferences objectForKey:kPreferenceKeyHomeScreenVolume] floatValue];
+    pfZoomWallpaper = [[preferences objectForKey:kPreferenceKeyZoomWallpaper] boolValue];
     pfMuteWhenMusicPlays = [[preferences objectForKey:kPreferenceKeyMuteWhenMusicPlays] boolValue];
     pfDisableInLowPowerMode = [[preferences objectForKey:kPreferenceKeyDisableInLowPowerMode] boolValue];
 }
